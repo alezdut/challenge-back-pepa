@@ -10,7 +10,6 @@ jest.mock("../../src/lib/poke-api/pokemon.ts")
 describe('Get pokemon by name', () => {
   const jsonMock = jest.fn();
   const statusMock = jest.fn();
-  const nextMock = jest.fn();
   const resMock: any = {
     status: statusMock.mockImplementation(() => ({
       json: jsonMock,
