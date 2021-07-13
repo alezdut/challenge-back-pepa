@@ -32,7 +32,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = __importDefault(require("http"));
-const express_http_context_1 = __importDefault(require("express-http-context"));
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const express_1 = __importDefault(require("express"));
@@ -44,7 +43,6 @@ const app = express_1.default();
 const server = http_1.default.createServer(app);
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(express_1.default.json());
-app.use(express_http_context_1.default.middleware);
 //routes
 app.use('/', routes);
 //listen

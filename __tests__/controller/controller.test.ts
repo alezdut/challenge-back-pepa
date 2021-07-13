@@ -9034,7 +9034,7 @@ describe('Get pokemon by name', () => {
       const serviceMock = <jest.Mock>pokeServices;
       serviceMock.mockReturnValue(mockResponse);
 
-      await getPokemonListController(reqMock as Request, resMock as Response, nextMock as NextFunction);
+      await getPokemonListController(reqMock as Request, resMock as Response);
 
       expect(jsonMock).toHaveBeenCalledWith(mockResponse);
     })
@@ -9046,7 +9046,7 @@ describe('Get pokemon by name', () => {
       const serviceMock = <jest.Mock>pokeServices;
       serviceMock.mockReturnValue(mockResponse);
 
-      await getPokemonListController({ body: { Name: "lorem" } } as Request, resMock as Response, nextMock as NextFunction);
+      await getPokemonListController({ body: { Name: "lorem" } } as Request, resMock as Response);
 
       expect(jsonMock).toHaveBeenCalledWith(mockResponse);
     })

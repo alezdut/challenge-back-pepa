@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const pokeServices_1 = __importDefault(require("../../services/pokeServices"));
-const getPokemonListController = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+const getPokemonListController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { name } = req.body;
         const getPokemon = yield pokeServices_1.default(name);

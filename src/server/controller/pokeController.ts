@@ -1,8 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 import getPokemonByName from '../../services/pokeServices';
 
-
-const getPokemonListController = async (req: Request, res: Response, next: NextFunction) => {
+const getPokemonListController = async (req: Request, res: Response) => {
     try {
         const { name } = req.body
         const getPokemon = await getPokemonByName(name);
