@@ -4,8 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest --collect-coverage",
+    "build": "rm -rf ./build && tsc -p .",
+    "start": "npm run build && node ./build/src/server/index.js ",
+    "start-dev": "nodemon -e ts --ignore build/ --exec \"tsc && DEBUG=true node build/src/server/index.js\""
   },
   "author": "Alejandro Zdut",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.3.1",
+    "@types/node-fetch": "^2.5.11",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-http-context": "^1.2.4",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "ts-node": "^10.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.24",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.5"
+  }
 }
