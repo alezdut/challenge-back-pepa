@@ -6,12 +6,19 @@
 ## Installation
 
 To run the project, simply clone the repository and install the PokeApi service dependencies.
+Then you can run "npm start" to start the server and "npm test" to run tests.
 
 ```bash
 git clone https://github.com/alezdut/challenge-back-pepa
 ```
 ```bash
 npm install
+```
+```bash
+npm start
+```
+```bash
+npm test
 ```
 
 ## Usage
