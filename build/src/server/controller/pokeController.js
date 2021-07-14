@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const pokeServices_1 = __importDefault(require("../../services/pokeServices"));
 const getPokemonListController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { name } = req.body;
+        const { name } = req.params;
         const getPokemon = yield pokeServices_1.default(name);
         res.status(200).json(getPokemon);
     }

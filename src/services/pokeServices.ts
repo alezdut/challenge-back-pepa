@@ -1,7 +1,13 @@
 import getPokemon from "../lib/poke-api/pokemon";
 
-const getPokemonByName = async (Name: string): Promise<any[]> => {
-    const result: any[] = await getPokemon(Name);
+type TData = {
+    name?: String;
+    number?: Number;
+    experience?: Number
+};
+
+const getPokemonByName = async (Name: string): Promise<TData> => {
+    const result: TData = await getPokemon(Name);
     return result;
 };
 

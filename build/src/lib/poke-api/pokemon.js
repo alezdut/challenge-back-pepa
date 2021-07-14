@@ -16,11 +16,10 @@ const config_1 = require("../../config");
 const request_1 = __importDefault(require("../request"));
 const urlPokeApi = `${config_1.pokemon.baseUrl}/pokemon/`;
 const getPokemon = (name) => __awaiter(void 0, void 0, void 0, function* () {
-    let result = [];
-    const { data } = yield request_1.default(urlPokeApi + name);
-    if (data) {
-        result = data;
-    }
+    let result = {};
+    const data = yield request_1.default(urlPokeApi + name);
+    // if (data === undefined) { return {} }
+    result = { name: data.name, order: data.order, base_experience: data.base_experience };
     return result;
 });
 exports.default = getPokemon;

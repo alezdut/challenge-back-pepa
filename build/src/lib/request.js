@@ -19,6 +19,6 @@ const get = (url) => __awaiter(void 0, void 0, void 0, function* () {
     };
     const response = yield node_fetch_1.default(url, options);
     const data = yield response.json();
-    return { data };
+    return data;
 });
 exports.default = get;

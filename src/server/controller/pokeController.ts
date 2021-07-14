@@ -3,7 +3,7 @@ import getPokemonByName from '../../services/pokeServices';
 
 const getPokemonListController = async (req: Request, res: Response) => {
     try {
-        const { name } = req.body
+        const { name } = req.params
         const getPokemon = await getPokemonByName(name);
         res.status(200).json(getPokemon);
     } catch (err) {

@@ -5,5 +5,5 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 const express_1 = require("express");
 const pokeController_1 = __importDefault(require("../controller/pokeController"));
 const router = express_1.Router();
-router.get('/pokemon/', pokeController_1.default);
+router.get('/pokemon/:name', pokeController_1.default);
 module.exports = router;

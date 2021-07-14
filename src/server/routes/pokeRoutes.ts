@@ -3,6 +3,6 @@ import getPokemonListController from "../controller/pokeController"
 
 const router: Router = Router();
 
-router.get('/pokemon/', getPokemonListController);
+router.get('/pokemon/:name', getPokemonListController);
 
 export = router;
